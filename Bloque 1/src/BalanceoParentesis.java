@@ -11,17 +11,6 @@ import java.util.Stack;
  *     Si la pila está vacía al desapilar → ERROR (cierra sin abrir)
  *   - Al final, si la pila NO está vacía → ERROR (abre sin cerrar)
  *
- * Paso a paso para "( ( a + b ) * c )":
- *   Carácter '(' → push('(')   | Pila: [( ]
- *   Carácter '(' → push('(')   | Pila: [( , (]
- *   Carácter 'a' → ignorar
- *   Carácter '+' → ignorar
- *   Carácter 'b' → ignorar
- *   Carácter ')' → pop()       | Pila: [(]   → coincide con '(' ✓
- *   Carácter '*' → ignorar
- *   Carácter 'c' → ignorar
- *   Carácter ')' → pop()       | Pila: []    → coincide con '(' ✓
- *   Fin: pila vacía → BALANCEADO ✓
  */
 public class BalanceoParentesis {
 
@@ -31,10 +20,7 @@ public class BalanceoParentesis {
         pila = new Stack<>();
     }
 
-    /**
-     * Verifica si la expresión tiene paréntesis balanceados.
-     * Muestra paso a paso cada APILAR y DESAPILAR.
-     */
+
     public void verificar(String expresion) {
         pila.clear();
         System.out.println("  Expresión: \"" + expresion + "\"");
